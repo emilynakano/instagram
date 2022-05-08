@@ -1,15 +1,10 @@
 import Sugestoes from "./Sugestoes";
+import User from "./User";
+
 export default function Sidebar() {
     return (
       <div class="sidebar">
-            <div class="usuario">
-              <img src="assets/img/catanacomics.svg" />
-              <div class="texto">
-                <strong>catanacomics</strong>
-                Catana
-              </div>
-            </div>
-  
+            <User img="assets/img/catanacomics.svg" nome="catanacomics" nomesub="Catana"/>
             <Sugestoes />
   
             <div class="links">
@@ -22,4 +17,3 @@ export default function Sidebar() {
           </div>
     );
   }
-  

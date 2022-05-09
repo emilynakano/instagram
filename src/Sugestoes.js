@@ -1,3 +1,4 @@
+import Sugestao from "./Sugestao"
 export default function Sugestoes() {
     return (
       <div class="sugestoes">
@@ -33,18 +34,3 @@ const items = [
     nome: "chibirdart"
   }
 ]
-function Sugestao(props) {
-  return (
-    <div class="sugestao">
-        <div class="usuario">
-          <img src={props.img} />
-          <div class="texto">
-            <div class="nome">{props.nome}</div>
-            <div class="razao">Segue ovocê</div>
-          </div>
-        </div>
-
-        <div class="seguir">Seguir</div>
-      </div>
-  )
-}

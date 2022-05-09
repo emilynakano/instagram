@@ -1,3 +1,4 @@
+import React from 'react';
 export default function Posts() {
     return(
       <div class="posts">
@@ -25,6 +26,20 @@ const items = [
 ]
 
 function Post(props) {
+  const [ion, setIon] = React.useState("heart-outline")
+  const [color, setColor] = React.useState("")
+  function heart() {
+    setIon("heart")
+    setColor("heart")
+    if(color !== ""){
+      setColor("")
+      setIon("heart-outline")
+    }
+  }
+  function heartImage() {
+    setIon("heart")
+    setColor("heart")
+  }
     return (
         <div class="post">
           <div class="topo">
@@ -37,14 +52,14 @@ function Post(props) {
             </div>
           </div>
 
-          <div class="conteudo">
+          <div class="conteudo" onClick={heartImage}>
             <img src={props.imgConteudo} />
           </div>
 
           <div class="fundo">
-            <div class="acoes">
+            <div class="acoes"> 
               <div>
-                <ion-icon name="heart-outline"></ion-icon>
+                <ion-icon onClick={heart} name={ion} class={color}></ion-icon>
                 <ion-icon name="chatbubble-outline"></ion-icon>
                 <ion-icon name="paper-plane-outline"></ion-icon>
               </div>

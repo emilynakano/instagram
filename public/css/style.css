@@ -69,7 +69,9 @@
   .navbar .icones ion-icon {
     margin: 0 5px;
   }
-  
+  .heart {
+    color: red !important;
+  }
   .navbar .icones-mobile {
     display: none;
   }
@@ -178,6 +180,7 @@
   
   .post .usuario, .post .topo img, .post .fundo img, .post ion-icon, .post strong {
     cursor: pointer;
+    visibility: visible;
   }
   
   .post .conteudo img {
